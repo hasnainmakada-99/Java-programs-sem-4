@@ -6,14 +6,23 @@ public class p15{
         }
       
         // Convert the binary string to a decimal number.
-        int decimalNumber = 0;
-        for (int i = 0; i < binaryString.length(); i++) {
-          decimalNumber = decimalNumber * 2 + binaryString.charAt(i) - '0';
-        }
+        try {
+          int decimalNumber = 0;
+          for (int i = 0; i < binaryString.length(); i++) {
+            decimalNumber = decimalNumber * 2 + binaryString.charAt(i) - '0';
+          }
       
-        // Return the decimal number.
-        return decimalNumber;
+          // Return the decimal number.
+          return decimalNumber;
+        } catch (NumberFormatException e) {
+          // Print the error message.
+          System.err.println("The string is not a valid binary number.");
+      
+          // Return -1 to indicate that an error has occurred.
+          return -1;
+        }
       }
+      
       
     public static void main(String[] args) {
         int output = bin2Dec("0011");
