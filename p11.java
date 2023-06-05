@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class p11 {
     public static void main(String[] args) {
         int[][] matrix = new int[6][6];
